@@ -72,6 +72,7 @@ function rebuildInputs() {
         if (!input.value || !input.validity.valid || !Number.isFinite(value)) {
           report("请输入输入框范围内的数字。当前模型未改变。");
           rebuildInputs();
+          render();
           return;
         }
         if (input.dataset.need !== undefined)

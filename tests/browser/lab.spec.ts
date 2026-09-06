@@ -1,4 +1,28 @@
 import { test, expect } from "@playwright/test";
+test("invalid assumptions preserve every displayed result", async ({ page }) => {
+  await page.goto("/");
+  await page.locator('[data-rule="needs"]').click();
+  const results = page.locator(
+    '#assumption-rows td[id^="allocation-"], #assumption-rows td[id^="coverage-"], #assumption-rows td[id^="outcome-"]',
+  );
+  await expect(results).toHaveCount(18);
+  const before = await results.allTextContents();
+  expect(before.every((value) => value.trim().length > 0)).toBe(true);
+  for (const [selector, invalid, original] of [
+    ['[data-need="0"]', "", "10"],
+    ['[data-need="0"]', "61", "10"],
+    ['[data-return="0"]', "", "0.8"],
+    ['[data-return="0"]', "3.1", "0.8"],
+  ]) {
+    const input = page.locator(selector);
+    await input.fill(invalid);
+    await input.press("Tab");
+    await expect(page.locator("#status")).toContainText("当前模型未改变");
+    await expect(input).toHaveValue(original);
+    await expect(results).toHaveText(before);
+  }
+});
+
 test("rules, reveal, changed assumptions and zero budget work", async ({
   page,
 }) => {

@@ -1,5 +1,9 @@
 # Veil Lab · 无知之幕实验桌
 
+[在线体验](https://wangchuan2003-a11y.github.io/veil-lab/) · [测试记录](https://github.com/wangchuan2003-a11y/veil-lab/actions/runs/34048212178)
+
+![无知之幕的分配规则实验](docs/preview.png)
+
 **不知道自己会是谁，你会接受怎样的分配？**
 
 六个虚构位置、固定资源预算。调整需求与收益假设，在均分、基本需求优先、提高最低覆盖、最大化总收益之间选择，再揭晓你的位置。

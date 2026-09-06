@@ -2,7 +2,7 @@
 
 [在线体验](https://wangchuan2003-a11y.github.io/veil-lab/) · [测试记录](https://github.com/wangchuan2003-a11y/veil-lab/actions/runs/34048212178)
 
-![无知之幕的分配规则实验](docs/preview.png)
+![无知之幕的分配规则实验](docs/preview.jpg)
 
 **不知道自己会是谁，你会接受怎样的分配？**
 

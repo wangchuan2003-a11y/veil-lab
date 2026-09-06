@@ -2,14 +2,14 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests/browser",
   use: {
-    baseURL: "http://127.0.0.1:4186",
+    baseURL: "http://127.0.0.1:4196",
     browserName: "chromium",
     headless: true,
     trace: "retain-on-failure",
   },
   webServer: {
     command: "npm run preview -- --strictPort",
-    url: "http://127.0.0.1:4186",
+    url: "http://127.0.0.1:4196",
     reuseExistingServer: !process.env.CI,
   },
   projects: [

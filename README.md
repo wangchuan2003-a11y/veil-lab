@@ -31,7 +31,7 @@ npm ci
 npm run dev
 ```
 
-打开 [http://127.0.0.1:5186](http://127.0.0.1:5186)。
+打开 [http://127.0.0.1:5196](http://127.0.0.1:5196)。
 
 ```sh
 npm test
@@ -40,7 +40,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-浏览器测试自动启动 4186 端口的生产预览，需要先构建。CI 在桌面与触屏视口执行 Chromium 测试，main 非 PR 检查通过后发布 GitHub Pages。仓库 Pages 来源应设为 GitHub Actions。
+浏览器测试自动启动 4196 端口的生产预览，需要先构建。CI 在桌面与触屏视口执行 Chromium 测试，main 非 PR 检查通过后发布 GitHub Pages。仓库 Pages 来源应设为 GitHub Actions。
 
 ## 数据与许可
 

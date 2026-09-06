@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --host 127.0.0.1 --port 5186",
+    "dev": "vite --host 127.0.0.1 --port 5196",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview --host 127.0.0.1 --port 4186",
+    "preview": "vite preview --host 127.0.0.1 --port 4196",
     "test": "tsc -p tsconfig.test.json && node --test tests/*.test.mjs",
     "test:e2e": "playwright test",
     "format": "prettier --write src tests index.html *.md"
